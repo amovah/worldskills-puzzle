@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Custom Puzzle - WorldSkills 2015</title>
+</head>
+<body>
+
+	<!-- START -->
+	<div id="modal-start" class='modal'>
+		<h2>Welcome do Custom Puzzle!</h2>
+		<p>This game consists in you make your puzzle game</p>
+		<div class="field">
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" />
+		</div>
+		<div class="field">
+			<label for="difficult">Difficult</label>
+			<select type="text" name="difficult" id="diff" >
+				<option value="0">EASY</option>
+				<option value="1">MEDIUM</option>
+				<option value="2">HARD</option>
+			</select>
+		</div>
+		<!-- DROP -->
+		<div class="field" id="drop">
+			<img id="primg" src=''>
+			<p>Drop your photo here!</p>
+		</div><!-- END DROP -->
+		<div class="field">
+			<a href='#' id='start'>START</a>
+		</div>
+	</div><!-- END START -->
+
+	<div class='modal alert' id='modal-end'>
+	<p>You won!</p>
+	<a href='#' onclick='localStorage.clear();location.href=""' >Restart</a>
+	</div>
+
+	<div class='modal alert' id='modal-file'>
+	<p>jpeg!</p>
+	<a href='#' class='close-modal'>OK</a>
+	</div>
+
+	<div class='modal alert' id='modal-input'>
+	<p>forms</p>
+	<a href='#' class='close-modal'>OK</a>
+	</div>
+
+	<div class='header'>
+		<p id='name-dis'></p>
+		<p id='time-dis'></p>
+		<div class='field'>
+			<a href='#' id='toggle'></a>
+			<a href='#' onclick='localStorage.clear();location.href=""' >Restart</a>
+		</div>
+	</div>
+
+	<div class='main'>
+		<div id='pieces'>
+		</div>
+		<div id='targets'>
+			<div id='target-pieces'>
+			</div>
+		</div>
+	</div>
+
+	<script type="application/javascript;version=1.8" src='js/j.js'></script>
+	<script type="application/javascript;version=1.8" src='js/jui.js'></script>
+	<script type="application/javascript;version=1.8" src='js/piece.js'></script>
+	<script type="application/javascript;version=1.8" src='js/puzzle.js'></script>
+	<script type="application/javascript;version=1.8" src='js/game.js'></script>
+	<script type="application/javascript;version=1.8" src='js/script.js'></script>
+
+</body>
+</html>
